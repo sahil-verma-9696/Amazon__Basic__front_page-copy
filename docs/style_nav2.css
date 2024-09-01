@@ -1,0 +1,56 @@
+.nav2 {
+    width: 100%;
+    height: 40px;
+    padding: 2px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--nav2__bg);
+    color: white;
+    gap: 10px;
+}
+
+.nav2__first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.nav2__first i {
+    width: 20px;
+    height: 20px;
+    background-image: url(./../Media/icons.png);
+    background-position: -170px -252px;
+}
+
+.nav2__list {
+    display: flex;
+
+}
+
+.nav2__list--elem {
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 8px;
+    height: 100%;
+}
+
+.nav2__list--elem:hover{
+    border-color: white;
+}
+
+.nav2__list a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav2__prime--dropicon{
+    width: 15px;
+    height: 15px;
+    filter: invert(50%);
+}

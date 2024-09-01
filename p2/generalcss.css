@@ -1,0 +1,69 @@
+a{
+    color: black;
+    text-decoration-line: none;
+}
+
+a:hover{
+    color: #F08804;
+    text-decoration-line: underline;
+}
+
+button{
+    outline: none;
+    border: none;
+}
+
+.df{
+    display: flex;
+}
+.df-col{
+    display: flex;
+    flex-direction: column;
+}
+.jcc{
+    display: flex;
+    justify-content: center;
+}
+.jcsb{
+    display: flex;
+    justify-content: space-between;
+}
+.jcse{
+    display: flex;
+    justify-content: space-evenly;
+}
+.aic{
+    display: flex;
+    align-items: center;
+}
+
+.jcc-aic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gray-txt {
+    color: #DDDD;
+}
+
+.yellow-btn{
+    background-color: #FFD814;
+}
+.high-light-txt{
+    color: #F08804;
+}
+
+.pos-relative{
+    position: relative;
+}
+.pos-absolute{
+    position: absolute;
+}
+
+.no-border{
+    border: none;
+}
+.no-border:hover{
+    border: none;
+}

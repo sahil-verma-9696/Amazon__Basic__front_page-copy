@@ -1,0 +1,125 @@
+.hero {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero__slides {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100%;
+}
+
+.hero__slides::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    /* z-index: 9; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0) 33%, var(--page__bg) 73%);
+}
+
+.hero__slide--1 {
+    background-image: url(./../Media/hero/1.Hero_PC._CB567405011_.jpg);
+
+}
+
+.hero__slide--2 {
+    background-image: url(./../Media/hero/Bath_mats_V1._CB567397377_.jpg);
+}
+
+.hero__slide--3 {
+    background-image: url(./../Media/hero/D103625178_DesktopTallHero_3000x1200_V3._CB558389732_.jpg);
+}
+
+.hero__slide--4 {
+    background-image: url(./../Media/hero/D91435399_WLA-BAU-Unrec-Hero_DesktopTallHero_3000x1200._CB582928607_.jpg);
+}
+
+.hero__slide--5 {
+    background-image: url(./../Media/hero/PC_Hero_1_3000._CB582457311_.jpg);
+}
+
+.hero__slide--6 {
+    background-image: url(./../Media/hero/PC_Hero_3000x1200_BS_PC-1X._CB558386206_.jpg);
+}
+
+.hero__slide--7 {
+    background-image: url(./../Media/hero/u499_1500._CB567286240_.jpg);
+}
+
+.hero__btn {
+    width: 5%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.hero__btn--left {
+    top: 0;
+    left: 0;
+}
+
+.hero__btn--right {
+    top: 0;
+    right: 0;
+}
+
+.hero__icon {
+
+    width: 30px;
+    height: 50px;
+}
+
+.hero__icon--left {
+
+    background-image: url(./../Media/icons1.png);
+    background-position: 0px -185px;
+}
+
+.hero__icon--right {
+
+    background-image: url(./../Media/icons1.png);
+    background-position: -30px -185px;
+}
+
+.pre {
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    transition: all linear 50ms;
+}
+
+.cent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all linear 50ms;
+}
+
+.next {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: all linear 50ms;
+}
+
+.left {
+    transform: translateX(-100%);
+}
+
+.right {
+    transform: translateX(100%);
+}

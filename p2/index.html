@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="generalcss.css">
+    <title>Amazon-copy</title>
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <nav>
+                <ul class="nav-ul">
+                    <li class="nav-li logo_nav-li logo_nav-img no-border"></li>
+                    <li class="nav-li l-type_nav-li icon-2h54_nav">
+                        <div class="left-frame_l-type-nav frame_icon-2h54-nav geo-icon_l-type-nav">
+                        </div>
+                        <div class="right-txt_l-type-nav txt_nav-li">
+                            <h5 class="top-txt_nav-li gray-txt">Deliver to Lacknow 208002</h5>
+                            <h4 class="bottom-txt_nav-li">Updated Location</h4>
+                        </div>
+                    </li>
+                    <li class="nav-li search-box_nav df jcc-aic no-border">
+                        <select class="part-1_search-box-nav">
+                            <option value="">All</option>
+                            <option value="">Amazon Pharmacy</option>
+                            <option value="">Book</option>
+                        </select>
+                        <input class="inp_search-box-nav" type="text">
+                        <button class="btn_search-box-nav img-btn_search-box-nav"></button>
+                    </li>
+                    <li class="nav-li r-type_nav-li icon-2h54_nav pos-relative">
+                        <div class="left-txt_r-type-nav txt-nav-li">
+                            <h5 class="top-txt_nav-li gray-txt">Hello, Sign in</h5>
+                            <h4 class="bottom-txt_nav-li">Accounts & Lists</h4>
+                        </div>
+                        <div class="right-frame_r-type-nav frame_icon-2h54-nav down-icon_r-type-nav"></div>
+                        <div class="active-nav active-sign-in pos-absolute">
+                            <div class="top_active-sign-in df-col aic">
+                                <button class="yellow-btn btn_active-sign-in">Sign in</button>
+                                <span>New coustome ? <a href="">start here</a></span>
+                            </div>
+                            <div class="bottom_active-sign-in df jcse">
+                                <ul>
+                                    <li>Your Lists</li>
+                                    <li><a href="">Create a Wish List</a></li>
+                                    <li><a href="">Wish from Any Website</a></li>
+                                    <li><a href="">Baby Wishlist</a></li>
+                                    <li><a href="">Discover Your Style</a></li>
+                                    <li><a href="">Explore Showroom</a></li>
+                                </ul>
+                                <ul>
+                                    <li>Your Account</li>
+                                    <li><a href="">Your Account</a></li>
+                                    <li><a href="">Your Orders</a></li>
+                                    <li><a href="">Your Wish List</a></li>
+                                    <li><a href="">Your Recommendations</a></li>
+                                    <li><a href="">Your Prime Membership</a></li>
+                                    <li><a href="">Your Prime Video</a></li>
+                                    <li><a href="">Your Subscribe & Save Items</a></li>
+                                    <li><a href="">Memberships & Subscriptions</a></li>
+                                    <li><a href="">Your Seller Account</a></li>
+                                    <li><a href="">Manage Your Content and </li>Devices</a>
+                                    <li><a href="">Your Free Amazon Business Account</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-li r-type_nav-li icon-2h54_nav returnOrder">
+                        <div class="left-txt_r-type-nav txt-nav-li">
+                            <h5 class="top-txt_nav-li gray-txt">Returns</h5>
+                            <h4 class="bottom-txt_nav-li">& Orders</h4>
+                        </div>
+                        <div class="right-frame_r-type-nav frame_icon-2h54-nav down-icon_r-type-nav"></div>
+                    </li>
+                    <li class="nav-li cart-box_nav df pos-relative">
+                        <div class="cart-icon_cart-box-nav"></div>
+                        <h5 class="cart-txt_cart-box-nav">Cart</h5>
+                        <span class="cart-count_cart-box-nav high-light-txt pos-absolute">0</span>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+       
+    </div>
+</body>
+<script>
+    let el = document.querySelector(".returnOrder");
+    el.addEventListener("mouseout",e=>{
+        document.querySelector(".active-nav").style.display = "block";
+    });
+    
+    console.log(el);
+</script>
+
+</html>

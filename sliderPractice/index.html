@@ -6,141 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .box {
-            min-width: 100%;
+        html,
+        body {
+            width: 100%;
             height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            top: 110px;
-            transition: all ease 100ms;
-            position: absolute;
-            top: 0;
-            left: 100%;
-        }
-
-        .box:nth-child(1) {
-            left: 0%;
-        }
-
-        .display {
-            margin: auto;
-            width: 100px;
-            height: 100px;
             background-color: black;
+        }
+
+        .display{
+            width: 200px;
+            height: 220px;
+            margin: auto;
             position: relative;
-            overflow: hidden;
+            background: green;
         }
 
-        .red {
-            background-color: red;
-            /* transform: translateX(-100%); */
+        .slider-container {
+            position: absolute;
+            left: 0px;
+            margin: auto;
+            width: calc(200px * 4);
+            height: 200px;
+            background-color: rgb(176, 174, 181);
         }
 
-        .blue {
-            background-color: blue;
-        }
-
-        .green {
-            background-color: green;
-        }
-
-        .brown {
-            background-color: brown;
-        }
-
-        .purple {
-            background-color: purple;
+        .slide {
+            float: left;
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
 
 <body>
-
     <div class="display">
-        <div class="box-1 box red ">
-            <h1>1</h1>
-        </div>
-        <div class="box-2 box green">
-            <h1>2</h1>
-        </div>
-        <div class="box-3 box brown">
-            <h1>3</h1>
-        </div>
-        <div class="box-4 box blue">
-            <h1>4</h1>
-        </div>
-        <div class="box-5 box purple">
-            <h1>5</h1>
+        <div class="slider-container">
+            <div class="slide slide-1" style="background-color: cyan;"></div>
+            <div class="slide slide-2" style="background-color: bisque;"></div>
+            <div class="slide slide-3" style="background-color: blueviolet;"></div>
+            <div class="slide slide-4" style="background-color: crimson;"></div>
         </div>
     </div>
-    <br><br><br><br><br><br>
-    <button onclick="left()">Left</button>
-    <button onclick="right()">Right</button>
-    <button onclick="a()">click me</button>
 </body>
-
-<script>
-    const slides = document.querySelectorAll(".box");
-    const parent = document.querySelector(".display");
-
-    function getLeft(e) {
-        const parent = document.querySelector(".display");
-        return parent.getBoundingClientRect().left - e.getBoundingClientRect().left;
-    }
-
-    function setLeft(e, value, transition = true) {
-        if (!transition) {
-            e.style.transition = "none"; // Disable transition
-        }
-        e.style.left = `${value}px`;
-        if (!transition) {
-            setTimeout(() => {
-                e.style.transition = ""; // Re-enable the transition after a short delay
-            }, 0);
-        }
-    }
-
-    
-
-    let i = 0;
-
-    function left() {
-        const current = slides[i];
-        setLeft(current, -(getLeft(current) + 100));
-        current.addEventListener("transitionend", function handler() {
-            setLeft(current, 100, false);
-            current.removeEventListener("transitionend", handler);
-        });
-
-        i++;
-        i = i % slides.length;
-
-        setLeft(slides[i], -(getLeft(slides[i]) + 100));
-    }
-
-    function right() {
-        const current = slides[i];
-        setLeft(current, (getLeft(current) + 100));  // Move the current slide to the right
-        current.addEventListener("transitionend", function handler() {
-            setLeft(current, -100, false);  // Return the current slide to its original position without transition
-            current.removeEventListener("transitionend", handler);
-        });
-
-        i--;
-        if (i < 0) {
-            i = slides.length - 1;  // Wrap around to the last slide
-        }
-
-        setLeft(slides[i], -(getLeft(slides[i]) + 100));  // Move the previous slide into position from the right
-    }
-
-</script>
 
 </html>
